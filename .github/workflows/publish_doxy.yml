@@ -11,7 +11,7 @@ jobs:
       - name: check out repo
         uses: actions/checkout@v6
       - name: build container
-        run: docker build -t doxygen:latest doxygen
+        run: docker build -t ${{secrets.DOCKERHUB_USER}}/doxygen:latest doxygen
       - name: log in to docker
         uses: docker/login-action@v4.1.0
         with:
