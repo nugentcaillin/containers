@@ -19,4 +19,4 @@ jobs:
           username: ${{secrets.DOCKERHUB_USER}}
           password: ${{secrets.DOCKERHUB_PASS}}
       - name: push image
-        run: docker image push doxygen:latest
+        run: docker image push ${{secrets.DOCKERHUB_USER}}/doxygen:latest
